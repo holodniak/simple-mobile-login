@@ -8,6 +8,7 @@ export default function App() {
     <View style={styles.container}>
         <CardLogin>
           <View style={styles.groupInput}>
+            <Text style={{fontSize: 24, fontFamily: 'sans-serif'}}>PedroTech</Text>
             <TextInput 
               style={styles.input}
               placeholder="E-mail"
@@ -17,12 +18,13 @@ export default function App() {
               style={styles.input}
               placeholder="Senha"
               onChangeText={() => {}}
+              secureTextEntry={true}
             ></TextInput>
             <TouchableOpacity style={styles.button}>
               <Text style={{color: "#fff"}}>Acessar</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.button}>
-              <Text style={{color: "#fff"}}>Cadastre-se agora!</Text>
+            <TouchableOpacity>
+              <Text style={{color: "#8a2be1"}}>Cadastre-se agora!</Text>
             </TouchableOpacity>
           </View>
         </CardLogin>
@@ -34,7 +36,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'column',
-    backgroundColor: 'blueviolet',
+    alignItems: 'center',
+    backgroundColor: 'blueviolet'
   },
   groupInput: {
     position: 'relative',
@@ -54,7 +57,7 @@ const styles = StyleSheet.create({
       borderStyle: 'solid',
       borderColor: '#8a2be1',
       borderWidth: 1,
-      margin: '1%'
+      margin: '5%'
   },
   button: {
     width: '60%',
@@ -65,6 +68,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     fontSize: 16,
     alignItems: 'center',
-    fontFamily: 'sans-serif'
+    fontFamily: 'sans-serif',
+    marginTop: '5%'
   }
 });
